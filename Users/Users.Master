@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Users.master.cs" Inherits="CRM.Users.Users" %>
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="height:auto;width: 1235px; border: 2px solid black">
+            <asp:Image ID="imageCRMicon" runat="server" ImageUrl="~/Images/CRM_icon.jpg" Height="70px" Width="150px" />
+            <div style="float: right; padding-top: 10px">
+                <div>
+                    <asp:Label ID="labelUserName" runat="server"></asp:Label>
+                    <asp:ImageButton ID="image1" runat="server" ImageUrl="~/Images/Person_logo.png" Height="30px" Width="40px" /><br />
+                    <asp:LinkButton ID="linkButtonLogOut" runat="server" OnClick="linkButtonLogOut_Click" Text="LogOut"></asp:LinkButton>
+                </div>
+            </div>
+        </div>
+        <div style="width: 1235px;">
+            <table style="height:auto;">
+                <tr>
+                    <td>
+                        <div style="border: 2px solid black;height:1450px; width: 150px;">
+                            <br />
+                            <div style="margin: 10px 0 0 25px">
+                                <asp:HyperLink ID="hyperLinkLeads" runat="server" NavigateUrl="~/Users/Leads.aspx" Text="Leads"></asp:HyperLink>
+                            </div>
+                            <br />
+                            <div style="margin: 10px 0 0 25px">
+                                <asp:HyperLink ID="hyperLinkAdminMaster" runat="server" NavigateUrl="~/Users/AdminMaster.aspx" Text="Admin Master"></asp:HyperLink>
+                            </div>
+                            <br />
+                            <div style="margin: 10px 0 0 25px">
+                                <asp:HyperLink ID="hyperLinkCustomers" runat="server" NavigateUrl="~/Users/Customers.aspx" Text="Customers"></asp:HyperLink>
+                            </div>
+                            <br />
+                            <div style="margin: 10px 0 0 25px">
+
+                                <asp:HyperLink ID="hyperLinkTickets" runat="server" NavigateUrl="~/Users/Tickets.aspx" Text="Tickets"></asp:HyperLink>
+                            </div>
+                            <br />
+
+                        </div>
+                    </td>
+                    <td>
+                        <div style="width: 1075px; border: 1px solid black;height:1450px">
+                            <asp:ContentPlaceHolder ID="Main" runat="server" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
